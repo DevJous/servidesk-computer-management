@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: node:18-alpine
+    container_name: dpelos-app
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      NODE_ENV: production
+      BUILD_STANDALONE: true
+      DB_LOCAL_URL: mongodb://dpelosdb:27017/dpelosdb
+    depends_on:
+      - dpelosdb
+    networks:
+      - dpelos-network
+
+  dpelosdb:
+    container_name: dpelosdb
+    image: mongo:latest
+    volumes:
+      - type: volume
+        source: MONGO_DATA
+        target: /data/db
+      - type: volume
+        source: MONGO_CONFIG
+        target: /data/configdb
+    ports:
+      - "27017:27017"
+    networks:
+      - dpelos-network
+
+networks:
+  dpelos-network:
+    name: dpelos-network
+
+volumes:
+  MONGO_DATA:
+    name: MONGO_DATA
+  MONGO_CONFIG:
+    name: MONGO_CONFIG
