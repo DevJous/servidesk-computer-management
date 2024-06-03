@@ -1,9 +1,8 @@
 'use client';
 
+import LogoServidesk from '@/../public/logo.png';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { Logo } from '@/components/Logo';
-import { NavLinks } from '@/components/NavLinks';
 import {
   Popover,
   PopoverButton,
@@ -11,6 +10,7 @@ import {
   PopoverPanel,
 } from '@headlessui/react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -59,14 +59,37 @@ export function Header() {
     <header>
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
-            <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
-            </Link>
-            <div className="hidden lg:flex lg:gap-10">
-              <NavLinks />
-            </div>
+          <Link
+            href="/public"
+            aria-label="Home"
+            className="flex gap-2 items-center"
+          >
+            <Image src={LogoServidesk} alt="Logo" className="h-12 w-12" />
+            <h1 className="text-3xl font-bold text-[#354f50]">ServiDesk</h1>
+          </Link>
+
+          <div className="hidden lg:flex items-center lg:gap-10">
+            <p className="text-[#354f50] font-semibold">
+              24/7 soporte:{' '}
+              <a
+                href="tel:1-800-700-6200"
+                className="text-[#354f50] font-semibold"
+              >
+                1-800-700-6200
+              </a>
+            </p>
+
+            <p className="text-[#354f50] font-semibold">
+              Correo:{' '}
+              <a
+                href="mailto:servidesk@dermolink.org"
+                className="text-[#354f50] font-semibold"
+              >
+                servidesk@dermolink.org
+              </a>
+            </p>
           </div>
+
           <div className="flex items-center gap-6">
             <Popover className="lg:hidden">
               {({ open }) => (
@@ -110,19 +133,11 @@ export function Header() {
                             <MobileNavLink href="/#features">
                               Features
                             </MobileNavLink>
-                            <MobileNavLink href="/#reviews">
-                              Reviews
-                            </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Pricing
-                            </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
                             <Button href="/login" variant="outline">
                               Log in
                             </Button>
-                            <Button href="#">Download the app</Button>
                           </div>
                         </PopoverPanel>
                       </>
@@ -131,8 +146,12 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
-              Log in
+            <Button
+              href="/sign-in"
+              variant="outline"
+              className="hidden lg:block"
+            >
+              Login
             </Button>
           </div>
         </Container>

@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -10,9 +11,18 @@ export function Footer() {
             <span>/</span>
             <p className="mt-6 text-[#0e004b] md:mt-0">Support</p>
           </div>
-          <p className="mt-6 font-semibold text-[#0e004b] md:mt-0">
-            &copy; {new Date().getFullYear()} ServiDesk. Privacy Policy
-          </p>
+
+          <div className="flex gap-2">
+            <p className="mt-6 font-semibold text-[#0e004b] md:mt-0">
+              &copy; {new Date().getFullYear()} ServiDesk.
+            </p>
+            <Link
+              href="#"
+              className="mt-6 font-semibold text-[#0e004b] md:mt-0"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </Container>
     </footer>

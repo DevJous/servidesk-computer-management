@@ -59,7 +59,7 @@ export default function SignInPage() {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-indigo-600"
                 />
                 <label
                   htmlFor="remember-me"
@@ -72,7 +72,7 @@ export default function SignInPage() {
               <div className="text-sm leading-6">
                 <a
                   href="#"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
+                  className="font-semibold text-blue-600 hover:text-indigo-500"
                 >
                   ¿Has olvidado tu contraseña?
                 </a>
@@ -82,19 +82,19 @@ export default function SignInPage() {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Iniciar sesión
               </button>
             </div>
           </form>
         </div>
-       
+
         <p className="mt-10 text-center text-sm text-gray-500">
           ¿No es un miembro?{' '}
           <Link
             href="/register"
-            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            className="font-semibold leading-6 text-blue-600 hover:text-indigo-500"
           >
             Registrarse
           </Link>
