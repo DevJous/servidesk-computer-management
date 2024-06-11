@@ -1,1 +1,70 @@
-{}
+{
+  "analytics-1": [
+    {
+      "userId": 4,
+      "title": "Proyectos Completados",
+      "initials": "PC",
+      "value": "+4 productos"
+    },
+    {
+      "userId": 4,
+      "title": "Asistentes disponibles",
+      "initials": "AD",
+      "value": "12 personas"
+    },
+    {
+      "userId": 4,
+      "title": "Proyectos en curso",
+      "initials": "PE",
+      "value": "2 proyectos"
+    },
+    {
+      "userId": 4,
+      "title": "Gasto total",
+      "initials": "GT",
+      "value": "$ 1,200.00"
+    }
+  ],
+  "services": [
+    {
+      "no": 1,
+      "userId": 4,
+      "tecnico": "Juan Perez",
+      "fechaInicio": "01/01/2021",
+      "fechaFin": "01/02/2021",
+      "presupuesto": 1000,
+      "descripcion": "Reparacion de computadora",
+      "estado": "En proceso"
+    },
+    {
+      "no": 2,
+      "userId": 4,
+      "tecnico": "Jose Sanchez",
+      "fechaInicio": "01/01/2021",
+      "fechaFin": "01/02/2021",
+      "presupuesto": 1000,
+      "descripcion": "Reparacion de computadora",
+      "estado": "Finalizado"
+    },
+    {
+      "no": 3,
+      "userId": 4,
+      "tecnico": "Francisco Navas",
+      "fechaInicio": "01/01/2021",
+      "fechaFin": "01/02/2021",
+      "presupuesto": 1000,
+      "descripcion": "Reparacion de computadora",
+      "estado": "Finalizado"
+    },
+    {
+      "no": 4,
+      "userId": 4,
+      "tecnico": "Jose Franco",
+      "fechaInicio": "01/01/2021",
+      "fechaFin": "01/02/2021",
+      "presupuesto": 1000,
+      "descripcion": "Reparacion de computadora",
+      "estado": "Finalizado"
+    }
+  ]
+}

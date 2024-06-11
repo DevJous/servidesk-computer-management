@@ -9,7 +9,7 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
-  plugins: [typographyPlugin],
+  plugins: [typographyPlugin, require('@tailwindcss/forms')],
   theme: {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
